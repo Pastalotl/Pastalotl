@@ -37,7 +37,6 @@ body{
 img{
     display: inline;
     float: left;
-    padding-right: 40px;
 }
 .datebox{
     color: #8710be;
@@ -62,5 +61,6 @@ img{
    margin-right: auto;
    display: block;
    margin-bottom: 10px;
+
 
 }
