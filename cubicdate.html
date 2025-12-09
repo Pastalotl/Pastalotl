@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>ubic Date Calc</title>
+        <title>Cubic Date Calc</title>
         <link rel="stylesheet" href="appearance.css">
         <!-- <link rel="icon" type="image/x-icon" href="silaera portrait.png"> -->
     </head>
@@ -28,6 +28,7 @@
               let day = parseInt(date.slice(-2));
               let month = parseInt(date.slice(5,6));
               let year = parseInt(date.slice(0,3));
+              console.log(day,month,year)
               document.getElementById('answers').innerHTML = lOfX(day,month,year);
               ">Calc it!</button>
         </div>
