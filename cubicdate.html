@@ -26,8 +26,8 @@
           <button type="submit" onclick="
               let date = document.getElementById('cubicInput').value;
               let day = parseInt(date.slice(-2));
-              let month = parseInt(date.slice(5,6));
-              let year = parseInt(date.slice(0,3));
+              let month = parseInt(date.slice(5,7));
+              let year = parseInt(date.slice(0,4));
               console.log(day,month,year)
               document.getElementById('answers').innerHTML = lOfX(day,month,year);
               ">Calc it!</button>
