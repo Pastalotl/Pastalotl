@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>ubic Date Calc</title>
+        <link rel="stylesheet" href="appearance.css">
+        <!-- <link rel="icon" type="image/x-icon" href="silaera portrait.png"> -->
+    </head>
+    <body>
+        <img src="banner.png" class="imageBanner">
+        <div class="banner">
+            <img src="Silaera.png" height="99px" width="99px" id="bannerIcon"><h1></i><u><b>Cubic Date Calc</b></u></h1> 
+        </div>
+        <div class="datebox" id="date"></div>
+        
+        <div class="content">
+        <h3>What's the equation below the title?</h3>
+        <p>That's the "cubic date"! It's just a cubic equation with roots that form the date when subject to the inequalities. It's overly complicated and gimmicky, but it's just a bit of fun.
+        The format and inequalities likely give away that the roots are equal to the date :P</p>
+        </div>
+        <div class="content">
+        <h2>La Calculadora</h2>
+        <p id="answers">
+          Put numbers in please
+        </p>
+          <input type="date"></input>
+          <button type="submit" onclick="document.getElementById("answers").innerHTML = lOfX()">Calc it!</button>
+        </div>
+
+        <script>
+            const har = new Date()
+            const date = har.getDate()
+            const month = har.getMonth()+1
+            const year = har.getFullYear()
+            var jer = lOfX(date,month,year)
+            document.getElementById("date").innerHTML = jer
+
+            function lOfX(alpha,beta,gamma){
+               gamma = parseInt(gamma.toString()[2]+gamma.toString()[3])
+               const b = -(alpha+beta+gamma)
+               const c = alpha*beta + beta*gamma + gamma*alpha
+               const d = -(alpha*beta*gamma)
+               const equation = "x³ " + b + "x² +" + c + "x " + d
+                if (alpha <= beta && alpha <= gamma) {
+                   inequality = "α≤"
+                if (beta <= gamma) {inequality += "β≤γ"}
+                else {inequality += "γ<β"}
+                }
+                else if (beta <= alpha && beta <= gamma){
+                    inequality = "β≤"
+                if (alpha <= gamma) { inequality += "α≤γ"}
+                else {inequality += "γ<α"}
+                }     
+                else{
+                inequality = "γ≤"
+                if (alpha <= beta) {inequality += "α≤β"}
+                else {inequality += "β<α"}
+                }
+                return( equation + " with the roots α, β, γ in the form α/β/γ where " + inequality)
+                } //cubic date
+            iconList = ["Mr Swanopoly.png","Ifforrem.png","Automata.png","Kauplaire.png","Ddwgyl.png","Ddwgyl Pride.png","Vayens.png","Taure.png","Calian.png","Nigelas.png","Silaera.png","Nigelas Festive.png"]
+            document.getElementById("bannerIcon").src = iconList[month-1]
+            favicon = document.createElement('Link');
+            favicon.rel = 'icon'
+            document.head.appendChild(favicon)
+            favicon.href = iconList[month-1]
+        </script>
+    </body>
+
+</html>
