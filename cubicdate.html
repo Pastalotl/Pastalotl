@@ -15,15 +15,21 @@
         <div class="content">
         <h3>What's the equation below the title?</h3>
         <p>That's the "cubic date"! It's just a cubic equation with roots that form the date when subject to the inequalities. It's overly complicated and gimmicky, but it's just a bit of fun.
-        The format and inequalities likely give away that the roots are equal to the date :P</p>
+        The format and inequalities likely give away that the roots are equal to the date. It gives the roots for the date in dd/mm/yy</p>
         </div>
         <div class="content">
         <h2>La Calculadora</h2>
         <p id="answers">
-          Put numbers in please
+          Please insert date or select payment type.
         </p>
-          <input type="date"></input>
-          <button type="submit" onclick="document.getElementById("answers").innerHTML = lOfX()">Calc it!</button>
+          <input type="date" id="cubicInput"></input>
+          <button type="submit" onclick="
+              let date = document.getElementById('cubicInput').value;
+              let day = parseInt(date.slice(-2));
+              let month = parseInt(date.slice(5,6));
+              let year = parseInt(date.slice(0,3));
+              document.getElementById('answers').innerHTML = lOfX(day,month,year);
+              ">Calc it!</button>
         </div>
 
         <script>
