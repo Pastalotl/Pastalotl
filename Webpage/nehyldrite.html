@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Nehyldrite, by Pastalotl</title>
+        <link rel="stylesheet" href="appearance.css">
+        <!-- <link rel="icon" type="image/x-icon" href="silaera portrait.png"> -->
+    </head>
+    <body class="hematite">
+        <img src="./banners/Scaenog Dungeon.png" class="imageBanner">
+        <div class="banner diamond">
+            <img src="icons/Silaera Combat.png" height="99px" width="99px" id="bannerIcon"><h1>Nehyldrite</u></h1> 
+        </div>
+        <i><div class="datebox diamond" id="date"></div></i>
+         <div class="sidebar kunzite">
+            <i><a href="./index.html">Home</href></i><br/>
+            <h3><a href="#Categories">Categories:</a></h3>
+            <a href="./characters/home.html">Characters</a><br/>
+            <a href="./species/home.html">Species</a><br/>
+            <a href="./locations/home.html">Locations</a> <br/>
+            <h3><a href="#Demo">Demo Versions:</a></h3>
+            <b><a href="https://pastalotl.github.io/Nehyldrite_Rescindment_Shrouded_Temple/">(v0.3.8) - Latest</a></b><br/>
+            <i><a href="https://pastalotl.github.io/Ynglaite_Rescindment_Shrouded_Temple/">(v0.2.5)</a><br/>
+            <a href="https://codepen.io/Pastalotl/full/RNPOdrW">(v0.1.3)</a></i><br/>
+        </div>
+        <div class="content diamond">
+            
+        <h2><u>About Nehyldrite</u></h2>
+        <P>Nehyldrite is a long-time worldbuilding project made by Pastalotl. It is planned to take form as several installments of turn-based RPGs, which provide
+            a window into some of the adventures in the world. There is currently one demo version for the first planned version, Nehyldrite: Rescindment.
+        </P>
+        <p>The story focuses on multiple main characters, usually grouped together, from different backgrounds, cultures, species and worlds altogether.
+            The first installment, Rescindment, focuses on six characters which have expanded backstories in its post-launch content and return for its 
+            sequel - Shards Adrift. The central theme of Nehyldrite is connection - the importance of making connections, maintaining them and the need to
+            sever them at times.
+        </p>
+        <h2 id="Categories"><u>Categories</u></h2>
+        <h3><ul>
+            <li><a href="characters/home.html">Characters</a></li>
+            <li><a href="species/home.html">Species & Linguistics</a></li>
+            <li><a href="locations/home.html">Locations</a></li>
+        </ul></h3>
+        <h2 id="Demo"><u>Demo Versions</u></h3>
+            <P>Nehyldrite currently only has one demo version for the first installment - Nehyldrite: Rescindment. This demo is currently still being worked on
+                and consists of the "Shrouded Temple" - a lone temple in the Clestuard region once inhabited by a mysterious and malicious cult. In the demo, 
+                Nigeläs, Kauplaire and Calian descend through the temple's catacombs to uncover the truth behind the cult and rout them out, once and for all.
+            </P>
+        <h4><ul>
+            <li><b><a href="https://pastalotl.github.io/Nehyldrite_Rescindment_Shrouded_Temple/">Latest Version (v0.3.8)</a></b> - most playable version</li>
+            <li><i><a href="https://pastalotl.github.io/Ynglaite_Rescindment_Shrouded_Temple/">2nd Prototype (v0.2.5)</a> - movement only</li>
+            <li><a href="https://codepen.io/Pastalotl/full/RNPOdrW">1st Prototype (v0.1.3)</a> - no gameplay</i></li>
+        </ul>
+        </h4>
+        <script>
+            const today = new Date()
+            const date = today.getDate()
+            const month = today.getMonth()+1
+            const year = today.getFullYear()
+            var cubicDate = dateToCubic(date,month,year)
+            document.getElementById("date").innerHTML = cubicDate
+
+            function dateToCubic(alpha,beta,gamma){
+               gamma = parseInt(gamma.toString()[2]+gamma.toString()[3])
+               const b = -(alpha+beta+gamma)
+               const c = alpha*beta + beta*gamma + gamma*alpha
+               const d = -(alpha*beta*gamma)
+               const equation = "x³ " + b + "x² +" + c + "x " + d
+                if (alpha <= beta && alpha <= gamma) {
+                   inequality = "α≤"
+                if (beta <= gamma) {inequality += "β≤γ"}
+                else {inequality += "γ<β"}
+                }
+                else if (beta <= alpha && beta <= gamma){
+                    inequality = "β≤"
+                if (alpha <= gamma) { inequality += "α≤γ"}
+                else {inequality += "γ<α"}
+                }     
+                else{
+                inequality = "γ≤"
+                if (alpha <= beta) {inequality += "α≤β"}
+                else {inequality += "β<α"}
+                }
+                return("Today is: " + equation + " with the roots α, β, γ in the form α/β/γ where " + inequality)
+                } //cubic date
+
+            iconList = ["Swanopoly Idle.png","Ifforrem Idle.png","Automata Combat.png","Kauplaire Idle.png","Ddwgyl Idle.png","Ddwgyl Idle (Pride).png","Vayens Idle.png","Taure Idle.png","Calian Idle.png","Nigelas Idle.png","Silaera Idle.png","Nigelas Festive.png"]
+            document.getElementById("bannerIcon").src = "icons/"+iconList[month-1]
+            favicon = document.createElement('Link');
+            favicon.rel = 'icon'
+            document.head.appendChild(favicon)
+            favicon.href = "icons/"+iconList[month-1]
+        </script>
+    </body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
