@@ -1,25 +1,34 @@
-
 /*Awww yeah! Click snap! Check it!*/
 .banner{
     align-self: center;
     color: #ffffff;
     background-color: rgb(49, 49, 49);
     border-radius: 6px;
-    height: 100px;
     width: 87%;
     margin-left: 0%;
     margin-right: auto;
     font-size: xx-large;
     align-content: center;
-    padding: 20px;
     margin-bottom: 4px; 
     margin-top: 4px;
+    display: flex;
+    & img {
+        margin: 20px;
+        width: 120px;
+        object-fit: contain;
+        align-self: center;
+   }
+   & .text{
+        margin: 20px;
+        flex: 1 1 auto;
+        align-self: center;
+   }
 }
 .content{
     border-radius: 7px;
     background: #80868b;
     margin: auto;
-    width: 70%;
+    width: 75%;
     margin-left: auto;
    margin-right: auto;
    display: block;
@@ -29,13 +38,36 @@
    padding-bottom:10px;
    margin-top: 20px;
 }
+
+.comptent{
+    border-radius: 7px;
+    background: #80868b;
+    margin: auto;
+    width: 70%;
+    margin-left: auto;
+   margin-right: auto;
+   display: flex;
+   margin-bottom: 5px;
+   padding-left: 15px;
+   padding-right: 15px;
+   padding-top: 4px;
+   padding-bottom:6px;
+   margin-top: 20px;
+   & img {
+    width: 10%;
+    margin: 10px;
+    object-fit: contain;
+    align-self: center;
+   }
+   & .text{
+    margin: 10px;
+    flex: 1 1 auto;
+   }
+}
+
 body{
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     background-size: 500px;
-}
-img{
-    display: inline;
-    float: left;
 }
 .datebox{
     color: #3b3c3d;
@@ -60,7 +92,6 @@ img{
    margin-right: margin-left;
    display: block;
    margin-bottom: 10px;
-
 
 }
 
@@ -100,7 +131,6 @@ input{
     border-bottom-left-radius:13px;
 }
 
-
 .amethyst{
     color: #d78df5;
     background-image: url("backgrounds/amethyst.png");
@@ -114,7 +144,7 @@ input{
 }
 
 .apatite{
-    color: #81adff;
+    color: #99bdff;
     background-image: url("backgrounds/apatite.png");
     body &{
         background: #11498a;
@@ -237,7 +267,7 @@ input{
 
 .sapphire{
     background-image: url("backgrounds/sapphire.png");
-    color: #8d8bf8;
+    color: #a4a2ff;
     body &{
         background: #18095c;
         a {
@@ -272,4 +302,3 @@ input{
     
 
 }
-
