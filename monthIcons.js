@@ -7,7 +7,7 @@ let icon = "../icons/"
 iconList = ["Swanopoly Idle.png","Ifforrem Idle.png","Peter Idle.png","Kauplaire Idle.png","Ddwgyl Idle.png","Ddwgyl Idle (Pride).png","Vayens Idle.png","Taure Idle.png","Calian Idle.png","Nigelas Idle.png","Silaera Idle.png","Nigelas Festive.png"]
 prideIconList = ["Ddwgyl Idle (Pride).png","Silaera Idle (Pride).png", "Kauplaire Idle (Pride).png", "Taure Idle (Pride).png", "Calian Idle (Pride).png"]
 festiveIconList = ["Nigelas Festive.png"]
-if(month==3 && date==30){/*international day of trans visibility*/
+if(month==3 && date==31){/*international day of trans visibility*/
     icon += "Silaera Idle (Pride).png"
 }
 else if(month==6){ /*pride month*/
