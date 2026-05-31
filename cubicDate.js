@@ -11,10 +11,10 @@ if(month==3 && date==31){/*international day of trans visibility*/
     icon += "Silaera Idle (Pride).png"
 }
 else if(month==6){ /*pride month*/
-    icon += prideIconList(Math.floor(Math.random()*(prideIconList.length)))
+    icon += prideIconList[Math.floor(Math.random()*(prideIconList.length))]
 }
 else if(month==12){
-    icon += festiveIconList(Math.floor(Math.random()*(festiveIconList.length)))
+    icon += festiveIconList[Math.floor(Math.random()*(festiveIconList.length))]
 }
 else{
     icon += iconList[month-1]
