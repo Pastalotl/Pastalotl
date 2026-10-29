@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+    
+<head>
+    <title>Cluedo Manager</title>
+    <link rel="stylesheet" href="appearance.css">
+    <meta charset="utf-8">
+    <!-- <link rel="icon" type="image/x-icon" href="silaera portrait.png"> -->
+</head>
+
+<body class="topaz">
+
+    <img src="./banners/Sandrone Tea Party.png" class="imageBanner">
+
+    <div class="banner diamond">
+        <img src="Silaera.png" id="bannerIcon"><h1></i><u><b>Cluedo</b></u></h1> 
+    </div>
+
+    <div class="datebox diamond" id="date"></div>
+
+    <div class="sidebar ruby">
+        <i><a href="./index.html">Home</href></i><br/><br/>
+        <h2><i><a href="./cubicDate.html">Cluedo </h2>You are here</href></a></i>
+    </div>
+
+    <div class="content topaz">
+        <h3>What do you mean by Cluedo?</h3>
+        <p>This part of the site is for the general management and shuffling of cluedo games.</p>
+    </div>
+
+    <div class="content diamond">
+        <h2>Game Setup</h2>
+        <p id="answers">
+          Toggle the sliders and options and then hit "begin game" to start playing!
+        </p>
+        <h3>Cluedo Names</h3>
+        <p>Toggle which names you'd like the cards to have in-game. (Logically equivalent to default)</p>
+        <button type="submit" class="teatime" onclick="listDefault()">Default Cluedo names</button>
+        <button type="submit" class="teatime" onclick="listUni()">Wacky Cluedo names</button>
+        <h3>Gameplay Parameters</h3>
+        <div class="gamestart">
+            <span id="sliderVal">3 players</span>
+            <input type="range" min="2" max="6" value="3" class="slider" id="players">
+            
+            <button class="teatime" type="submit" onclick="
+                initialise();
+                pickSuspect();
+                dealCards(document.getElementById('players').value);
+            ">Begin Game!</button>
+        </div>
+    </div>
+    <div class="content citrine">
+        <h2>Hands</h2>
+        <p>Reveal each player's hand by pressing the buttons accordingly</p>
+        <div id="handspace"></div>
+        <button type="submit" class="teatime" onclick="showHand()">Show next hand</button>
+        <button type="submit" class="teatime" onclick="hideHand()">Hide hand</button>
+    </div>
+        <div class="content topaz">
+            <h2>Final Guess</h2>
+            <p>Select your guess from the drop downs and then confirm it with the submission button!</p>
+            <select name="characterSelect" class="saucer" id="characterSelect"> 
+                </select>
+            <select name="weaponSelect" class="saucer" id="weaponSelect"> 
+                </select>
+            <select name="roomSelect" class="saucer" id="roomSelect">
+                </select>
+            <button type="submit" class="teatime" onclick="finalGuess(characterSelect.value,weaponSelect.value,roomSelect.value)">Final Guess</button>
+                <div id="guessResult"></div>
+        </div>
+        
+        <script src="cubicdate.js"></script>
+        <script src="cluedo.js"></script>
+    </body>
+
+</html>
