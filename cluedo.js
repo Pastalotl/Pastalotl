@@ -31,7 +31,7 @@ let handCount = 0
 let currentHand = 0
 const defChars = ["Reverend_Green","Professor_Plum","Mrs_Peacock","Colonel_Mustard","Miss_Scarlet","Mrs_White"]
 const defWeaps = ["Candlestick","Knife","💖Lead_Pipe💖","Revolver","Rope","Wrench"]
-const defRooms = ["Conservatory","Lounge","Kitchen","Library","Hall","Study","Ballroom","Living_Room","Billiards_Room"]
+const defRooms = ["Conservatory","Lounge","Kitchen","Library","Hall","Study","Ballroom","Dining_Room","Billiards_Room"]
 let listC = defChars
 let listW = defWeaps
 let listR = defRooms
@@ -80,7 +80,7 @@ function listDefault(){
 }
 function listUni(){
     listC=["Ella","Jo","Sophie","G_H_Hardy","Leonhard_Euler","✨Bob✨"]
-    listW=["'A_Mathematician's_Apology'_Copy","Fireball","Sssglock","Lightsaber","Extended_Euclidean_Algorithm","Lecture_Notes"]
+    listW=["'A_Mathematicians_Apology'_Copy","Fireball","Sssglock","Lightsaber","Extended_Euclidean_Algorithm","Lecture_Notes"]
     listR=["Fey_Building","Senate_House","Ivy_Gate","Priory_Road_Complex","Woodland_Road","Wills_Memorial","Victoria_Rooms","Physics_Building","Richmond_Building"]
 }
 function pickSuspect(){
