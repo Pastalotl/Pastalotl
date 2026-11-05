@@ -80,7 +80,7 @@ function listDefault(){
 }
 function listUni(){
     listC=["Ella","Jo","Sophie","Lucy","G_H_Hardy","Leonhard_Euler"]
-    listW=["'A_Mathematicians_Apology'","Fireball","Sssglock","Lightsaber","Extended_Euclidean_Algorithm","Lecture_Notes"]
+    listW=["A_Mathematicians_Apology","Fireball","Sssglock","Lightsaber","Extended_Euclidean_Algorithm","Lecture_Notes"]
     listR=["Fey_Building","Senate_House","Ivy_Gate","Priory_Road_Complex","Woodland_Road","Wills_Memorial","Victoria_Rooms","Physics_Building","Richmond_Building"]
 }
 function pickSuspect(){
